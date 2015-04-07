@@ -1,9 +1,23 @@
-require 'cucumber/rake/task'
-require 'rspec/core/rake_task'
-require 'rubocop/rake_task'
+source 'https://rubygems.org'
 
-RuboCop::RakeTask.new :cop
-RSpec::Core::RakeTask.new :spec
-Cucumber::Rake::Task.new :cuke
+ruby '2.2.1'
 
-task default: [:cop, :spec, :cuke]
+gem 'sinatra'
+
+group :development, :test do
+  gem 'capybara'
+  gem 'cucumber'
+  gem 'cucumber-sinatra'
+  gem 'launchy'
+  gem 'rspec'
+  gem 'shotgun'
+  gem 'rubocop-rspec'
+  gem 'coveralls', require: false
+  gem 'byebug'
+  gem 'data_mapper'
+  gem 'dm-postgres-adapter'
+end
+
+group :test do
+  gem 'rspec'  
+end
