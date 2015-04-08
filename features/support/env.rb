@@ -10,6 +10,7 @@ require 'rspec'
 
 Capybara.app = BookmarkManager
 
+# A comment
 class BookmarkManagerWorld
   include Capybara::DSL
   include RSpec::Expectations
