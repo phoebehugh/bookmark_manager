@@ -18,7 +18,3 @@ group :development, :test do
   gem 'dm-postgres-adapter'
   gem 'database_cleaner'
 end
-
-group :test do
-  gem 'rspec'  
-end
