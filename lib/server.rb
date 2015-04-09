@@ -66,6 +66,10 @@ class BookmarkManager < Sinatra::Base
     end
   end
 
+  post '/forgotten_password' do
+    erb :'sessions/forgotten_password'
+  end
+
   get '/sessions/new' do
     erb :'sessions/new'
   end
